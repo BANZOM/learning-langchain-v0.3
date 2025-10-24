@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 load_dotenv()
 
+from article import article
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 
@@ -38,3 +40,4 @@ print(ai_msg)
 
 creative_ai_msg = creative_llm.invoke(messages)
 print(creative_ai_msg)
+
