@@ -17,4 +17,12 @@ dependencies = [
     "google-search-results>=2.4.2",
     "python-dotenv>=1.0.1",
     "langchain-google-genai>=2.0.9",
+    "scikit-image>=0.25.2",
+    "matplotlib>=3.10.7",
+    "diffusers",
+    "torch>=2.9.0",
+    "google-genai>=1.46.0",
 ]
+
+[tool.uv.sources]
+diffusers = { git = "https://github.com/huggingface/diffusers.git" }
