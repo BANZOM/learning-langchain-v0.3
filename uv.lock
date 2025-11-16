@@ -535,8 +535,7 @@ name = "google-ai-generativelanguage"
 version = "0.6.15"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "google-api-core", version = "2.25.2", source = { registry = "https://pypi.org/simple" }, extra = ["grpc"], marker = "python_full_version >= '3.14'" },
-    { name = "google-api-core", version = "2.27.0", source = { registry = "https://pypi.org/simple" }, extra = ["grpc"], marker = "python_full_version < '3.14'" },
+    { name = "google-api-core", extra = ["grpc"] },
     { name = "google-auth" },
     { name = "proto-plus" },
     { name = "protobuf" },
@@ -550,15 +549,12 @@ wheels = [
 name = "google-api-core"
 version = "2.25.2"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.14'",
-]
 dependencies = [
-    { name = "google-auth", marker = "python_full_version >= '3.14'" },
-    { name = "googleapis-common-protos", marker = "python_full_version >= '3.14'" },
-    { name = "proto-plus", marker = "python_full_version >= '3.14'" },
-    { name = "protobuf", marker = "python_full_version >= '3.14'" },
-    { name = "requests", marker = "python_full_version >= '3.14'" },
+    { name = "google-auth" },
+    { name = "googleapis-common-protos" },
+    { name = "proto-plus" },
+    { name = "protobuf" },
+    { name = "requests" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/09/cd/63f1557235c2440fe0577acdbc32577c5c002684c58c7f4d770a92366a24/google_api_core-2.25.2.tar.gz", hash = "sha256:1c63aa6af0d0d5e37966f157a77f9396d820fba59f9e43e9415bc3dc5baff300", size = 166266, upload-time = "2025-10-03T00:07:34.778Z" }
 wheels = [
@@ -567,51 +563,24 @@ wheels = [
 
 [package.optional-dependencies]
 grpc = [
-    { name = "grpcio", marker = "python_full_version >= '3.14'" },
-    { name = "grpcio-status", marker = "python_full_version >= '3.14'" },
-]
-
-[[package]]
-name = "google-api-core"
-version = "2.27.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version == '3.13.*'",
-    "python_full_version < '3.13'",
-]
-dependencies = [
-    { name = "google-auth", marker = "python_full_version < '3.14'" },
-    { name = "googleapis-common-protos", marker = "python_full_version < '3.14'" },
-    { name = "proto-plus", marker = "python_full_version < '3.14'" },
-    { name = "protobuf", marker = "python_full_version < '3.14'" },
-    { name = "requests", marker = "python_full_version < '3.14'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/da/99/6c8b44ecc28026fd9441d7fcc5434ee1b3976c491f2f810b464c4702c975/google_api_core-2.27.0.tar.gz", hash = "sha256:d32e2f5dd0517e91037169e75bf0a9783b255aff1d11730517c0b2b29e9db06a", size = 168851, upload-time = "2025-10-22T23:54:14.195Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/77/93/ecf9f7caa99c71e969091e9a78789f11b2dea5c684917eab7c54a8d13560/google_api_core-2.27.0-py3-none-any.whl", hash = "sha256:779a380db4e21a4ee3d717cf8efbf324e53900bf37e1ffb273e5348a9916dd42", size = 167110, upload-time = "2025-10-22T23:54:12.805Z" },
-]
-
-[package.optional-dependencies]
-grpc = [
-    { name = "grpcio", marker = "python_full_version < '3.14'" },
-    { name = "grpcio-status", marker = "python_full_version < '3.14'" },
+    { name = "grpcio" },
+    { name = "grpcio-status" },
 ]
 
 [[package]]
 name = "google-api-python-client"
-version = "2.185.0"
+version = "2.187.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "google-api-core", version = "2.25.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
-    { name = "google-api-core", version = "2.27.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "google-api-core" },
     { name = "google-auth" },
     { name = "google-auth-httplib2" },
     { name = "httplib2" },
     { name = "uritemplate" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8e/5a/6f9b49d67ea91376305fdb8bbf2877c746d756e45fd8fb7d2e32d6dad19b/google_api_python_client-2.185.0.tar.gz", hash = "sha256:aa1b338e4bb0f141c2df26743f6b46b11f38705aacd775b61971cbc51da089c3", size = 13885609, upload-time = "2025-10-17T15:00:35.623Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/75/83/60cdacf139d768dd7f0fcbe8d95b418299810068093fdf8228c6af89bb70/google_api_python_client-2.187.0.tar.gz", hash = "sha256:e98e8e8f49e1b5048c2f8276473d6485febc76c9c47892a8b4d1afa2c9ec8278", size = 14068154, upload-time = "2025-11-06T01:48:53.274Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fa/28/be3b17bd6a190c8c2ec9e4fb65d43e6ecd7b7a1bb19ccc1d9ab4f687a58c/google_api_python_client-2.185.0-py3-none-any.whl", hash = "sha256:00fe173a4b346d2397fbe0d37ac15368170dfbed91a0395a66ef2558e22b93fc", size = 14453595, upload-time = "2025-10-17T15:00:33.176Z" },
+    { url = "https://files.pythonhosted.org/packages/96/58/c1e716be1b055b504d80db2c8413f6c6a890a6ae218a65f178b63bc30356/google_api_python_client-2.187.0-py3-none-any.whl", hash = "sha256:d8d0f6d85d7d1d10bdab32e642312ed572bdc98919f72f831b44b9a9cebba32f", size = 14641434, upload-time = "2025-11-06T01:48:50.763Z" },
 ]
 
 [[package]]
@@ -630,15 +599,15 @@ wheels = [
 
 [[package]]
 name = "google-auth-httplib2"
-version = "0.2.0"
+version = "0.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "google-auth" },
     { name = "httplib2" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/56/be/217a598a818567b28e859ff087f347475c807a5649296fb5a817c58dacef/google-auth-httplib2-0.2.0.tar.gz", hash = "sha256:38aa7badf48f974f1eb9861794e9c0cb2a0511a4ec0679b1f886d108f5640e05", size = 10842, upload-time = "2023-12-12T17:40:30.722Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e0/83/7ef576d1c7ccea214e7b001e69c006bc75e058a3a1f2ab810167204b698b/google_auth_httplib2-0.2.1.tar.gz", hash = "sha256:5ef03be3927423c87fb69607b42df23a444e434ddb2555b73b3679793187b7de", size = 11086, upload-time = "2025-10-30T21:13:16.569Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/be/8a/fe34d2f3f9470a27b01c9e76226965863f153d5fbe276f83608562e49c04/google_auth_httplib2-0.2.0-py2.py3-none-any.whl", hash = "sha256:b65a0a2123300dd71281a7bf6e64d65a0759287df52729bdd1ae2e47dc311a3d", size = 9253, upload-time = "2023-12-12T17:40:13.055Z" },
+    { url = "https://files.pythonhosted.org/packages/44/a7/ca23dd006255f70e2bc469d3f9f0c82ea455335bfd682ad4d677adc435de/google_auth_httplib2-0.2.1-py3-none-any.whl", hash = "sha256:1be94c611db91c01f9703e7f62b0a59bbd5587a95571c7b6fade510d648bc08b", size = 9525, upload-time = "2025-10-30T21:13:15.758Z" },
 ]
 
 [[package]]
@@ -666,8 +635,7 @@ version = "0.8.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "google-ai-generativelanguage" },
-    { name = "google-api-core", version = "2.25.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
-    { name = "google-api-core", version = "2.27.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "google-api-core" },
     { name = "google-api-python-client" },
     { name = "google-auth" },
     { name = "protobuf" },
@@ -690,14 +658,14 @@ sdist = { url = "https://files.pythonhosted.org/packages/77/30/b3a6f6a2e00f81535
 
 [[package]]
 name = "googleapis-common-protos"
-version = "1.71.0"
+version = "1.72.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "protobuf" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/30/43/b25abe02db2911397819003029bef768f68a974f2ece483e6084d1a5f754/googleapis_common_protos-1.71.0.tar.gz", hash = "sha256:1aec01e574e29da63c80ba9f7bbf1ccfaacf1da877f23609fe236ca7c72a2e2e", size = 146454, upload-time = "2025-10-20T14:58:08.732Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e5/7b/adfd75544c415c487b33061fe7ae526165241c1ea133f9a9125a56b39fd8/googleapis_common_protos-1.72.0.tar.gz", hash = "sha256:e55a601c1b32b52d7a3e65f43563e2aa61bcd737998ee672ac9b951cd49319f5", size = 147433, upload-time = "2025-11-06T18:29:24.087Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/25/e8/eba9fece11d57a71e3e22ea672742c8f3cf23b35730c9e96db768b295216/googleapis_common_protos-1.71.0-py3-none-any.whl", hash = "sha256:59034a1d849dc4d18971997a72ac56246570afdd17f9369a0ff68218d50ab78c", size = 294576, upload-time = "2025-10-20T14:56:21.295Z" },
+    { url = "https://files.pythonhosted.org/packages/c4/ab/09169d5a4612a5f92490806649ac8d41e3ec9129c636754575b3553f4ea4/googleapis_common_protos-1.72.0-py3-none-any.whl", hash = "sha256:4299c5a82d5ae1a9702ada957347726b167f9f8d1fc352477702a1e851ff4038", size = 297515, upload-time = "2025-11-06T18:29:13.14Z" },
 ]
 
 [[package]]
@@ -1218,7 +1186,7 @@ wheels = [
 
 [[package]]
 name = "langchain-google-genai"
-version = "2.0.9"
+version = "2.0.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "filetype" },
@@ -1226,9 +1194,9 @@ dependencies = [
     { name = "langchain-core" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/fb/1f/2a275165ba5a455147472682db71ca4cc45e414cfb37c1245efe283d4f43/langchain_google_genai-2.0.9.tar.gz", hash = "sha256:65205089da1f72688a0ed6e7c6914af308b6514ab8038fd8126ecb20f1df234c", size = 37437, upload-time = "2025-01-18T06:36:58.895Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b5/a7/057a20388d406bf7d085c28bde0c731c5d4a9972828f64fa4d63d25c5288/langchain_google_genai-2.0.7.tar.gz", hash = "sha256:96176cf8c23e24945011bf4a978c07ac13e1d1723caba19136f146c64d1a21c4", size = 37085, upload-time = "2024-12-12T14:15:10.907Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c2/6a/b6cbd72b820d31cf35fe677cc844220aa82a09b92167d43ade815acdec4d/langchain_google_genai-2.0.9-py3-none-any.whl", hash = "sha256:48d8c78c42048d54f40dff333db9d359746644e0feb0e08b5eabdf34ad7149ca", size = 41698, upload-time = "2025-01-18T06:36:56.597Z" },
+    { url = "https://files.pythonhosted.org/packages/56/22/c3617368229ec45dd8a9c19fe2b9cdfb35cdc8460a19d92331358aedb2c2/langchain_google_genai-2.0.7-py3-none-any.whl", hash = "sha256:8925cc4992799e19d20690f82567db8a8590cc58e32bb44e895aad9b5d282472", size = 41334, upload-time = "2024-12-12T14:15:09.724Z" },
 ]
 
 [[package]]
@@ -1320,7 +1288,7 @@ requires-dist = [
     { name = "langchain", specifier = ">=0.3.7" },
     { name = "langchain-community", specifier = ">=0.3.5" },
     { name = "langchain-core", specifier = ">=0.3.15" },
-    { name = "langchain-google-genai", specifier = ">=2.0.9" },
+    { name = "langchain-google-genai", specifier = "==2.0.7" },
     { name = "langchain-openai", specifier = ">=0.2.5" },
     { name = "langsmith", specifier = ">=0.1.139" },
     { name = "matplotlib", specifier = ">=3.10.7" },
